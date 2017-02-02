@@ -1,6 +1,4 @@
-﻿using System;
-using NUnit;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using TimestampMain;
 
 namespace TimestampTest

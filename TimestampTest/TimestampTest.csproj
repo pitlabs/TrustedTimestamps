@@ -37,6 +37,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -107,8 +110,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Timestamp\Timestamp.csproj">
+    <ProjectReference Include="..\TimestampConsole\TimestampConsole.csproj">
       <Project>{e5293b83-8f97-4821-81a0-7b34e2cba2dc}</Project>
+      <Name>TimestampConsole</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Timestamp\Timestamp.csproj">
+      <Project>{9eccd6f7-dec3-4a34-a3ff-169f7cacd7bb}</Project>
       <Name>Timestamp</Name>
     </ProjectReference>
   </ItemGroup>

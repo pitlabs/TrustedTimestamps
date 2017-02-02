@@ -1,9 +1,9 @@
 ﻿using System;
-using TimestampMain;
 using System.Security.Cryptography.X509Certificates;
 using Org.BouncyCastle.Tsp;
 using System.IO;
 using NUnit.Framework;
+using TimestampConsoleMain;
 
 namespace TimestampTest
 {
