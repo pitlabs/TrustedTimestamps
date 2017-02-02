@@ -351,12 +351,12 @@ namespace TimestampMain
             if (!(arguments[5].Length == 0))
             {
                 X509Certificate2Collection collection = GetCertificates(new string[] { arguments[5], arguments[6]});
-                verified = TimestampVerifyer.Verify(req, resp, collection);
+                verified = TimestampVerification.Verify(req, resp, collection);
             }
             // Verification without additional certificates.
             else
             {
-                verified = TimestampVerifyer.Verify(req, resp);
+                verified = TimestampVerification.Verify(req, resp);
             }
             return verified;
         }
@@ -380,7 +380,7 @@ namespace TimestampMain
                         TimeStampResponse resp = result.Item2;
                         try
                         {
-                            verified = TimestampVerifyer.Verify(req, resp);
+                            verified = TimestampVerification.Verify(req, resp);
                         }
                         catch (Exception e)
                         {
