@@ -37,10 +37,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.0.5-preview\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
@@ -66,8 +72,10 @@
     </Compile>
     <Compile Include="TimestampFileTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TimestampVerifyerTest.cs" />
+    <Compile Include="TimestampVerificationTest.cs" />
     <Compile Include="TimestampTesting.cs" />
+    <Compile Include="TimestampGeneratorTest.cs" />
+    <Compile Include="TimestampVerifyerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -102,9 +110,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Timestamp\Timestamp.csproj">
+    <ProjectReference Include="..\TimestampConsole\TimestampConsole.csproj">
       <Project>{e5293b83-8f97-4821-81a0-7b34e2cba2dc}</Project>
-      <Name>Timestamp</Name>
+      <Name>TimestampConsole</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Timestamp\TrustedTimestamps.csproj">
+      <Project>{9eccd6f7-dec3-4a34-a3ff-169f7cacd7bb}</Project>
+      <Name>TrustedTimestamps</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

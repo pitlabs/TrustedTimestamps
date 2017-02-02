@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Pit.Labs.Timestamp</id>
+    <version>1.0.1-alpha</version>
+    <title>TrustedTimestamps</title>
+    <authors>RWTHAachenUniversity</authors>
+    <licenseUrl>https://github.com/pitlabs/TrustedTimestamps/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/pitlabs/TrustedTimestamps</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>TrustedTimestamps is a tool for easily creating and verifying Trusted Timestamps for SHA256 hashes or for files.</description>
+    <releaseNotes>Initial Nuget release</releaseNotes>
+    <copyright>Copyright © 2017 IT Center RWTH Aachen</copyright>
+    <tags>trusted timestamps</tags>
+	<dependencies>
+	  <dependency id="BouncyCastle" version="1.8.1" />
+	</dependencies>
+	<frameworkAssemblies>
+	  <frameworkAssembly assemblyName="System.Net" />
+	  <frameworkAssembly assemblyName="System.Security" />
+	</frameworkAssemblies>
+  </metadata>
+</package>

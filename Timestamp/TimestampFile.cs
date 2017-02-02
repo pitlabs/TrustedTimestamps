@@ -1,16 +1,11 @@
 ﻿using Org.BouncyCastle.Math;
 using Org.BouncyCastle.Tsp;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using Verify;
 
-namespace Timestamping
+namespace Pit.Labs.Timestamp
 {
     public class TimestampFile
     {
@@ -130,6 +125,18 @@ namespace Timestamping
 
         public static Tuple<TimeStampRequest, TimeStampResponse> GetTimestamp(byte[] hash, string pathOut, bool certReq, bool nonceReq)
         {
+            Tuple<TimeStampRequest, TimeStampResponse> result = GetTimestamp(hash, certReq, nonceReq);
+            // Write the Response to the given path.
+            using (FileStream fsOut = new FileStream(pathOut, FileMode.Create))
+            {
+                WriteTsResponseToStream(result.Item2, fsOut);
+            }
+            // Return the result.            
+            return result;
+        }
+
+        public static Tuple<TimeStampRequest, TimeStampResponse> GetTimestamp(byte[] hash, bool certReq, bool nonceReq)
+        {
             // Create Timestamp Request.
             TimeStampRequest req;
             BigInteger nonce = GetNonce(nonceReq);
@@ -138,12 +145,6 @@ namespace Timestamping
             HttpWebRequest webReq = (HttpWebRequest)CreateWebRequest(req.GetEncoded(), "http://zeitstempel.dfn.de/", "POST", "application/timestamp-query");
             HttpWebResponse webResp = (HttpWebResponse)PostTimestampRequest(req, webReq);
             TimeStampResponse resp = TimestampFile.CreateTimestampResponse(webResp);
-            // Write the Response to the given path.
-            using (FileStream fsOut = new FileStream(pathOut, FileMode.Create))
-            {
-                WriteTsResponseToStream(resp, fsOut);
-            }
-            // Return the result.
             Tuple<TimeStampRequest, TimeStampResponse> result = new Tuple<TimeStampRequest, TimeStampResponse>(req, resp);
             return result;
         }

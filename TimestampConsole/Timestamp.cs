@@ -1,17 +1,12 @@
 ﻿using Org.BouncyCastle.Tsp;
-using Org.BouncyCastle.OpenSsl;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Threading.Tasks;
-using Timestamping;
-using Verify;
 using Org.BouncyCastle.Math;
+using Pit.Labs.Timestamp;
 
-namespace TimestampMain
+namespace Pit.Labs.TimestampConsole
 {
     public class Timestamp
     {
@@ -351,12 +346,12 @@ namespace TimestampMain
             if (!(arguments[5].Length == 0))
             {
                 X509Certificate2Collection collection = GetCertificates(new string[] { arguments[5], arguments[6]});
-                verified = TimestampVerifyer.Verify(req, resp, collection);
+                verified = TimestampVerification.Verify(req, resp, collection);
             }
             // Verification without additional certificates.
             else
             {
-                verified = TimestampVerifyer.Verify(req, resp);
+                verified = TimestampVerification.Verify(req, resp);
             }
             return verified;
         }
@@ -380,7 +375,7 @@ namespace TimestampMain
                         TimeStampResponse resp = result.Item2;
                         try
                         {
-                            verified = TimestampVerifyer.Verify(req, resp);
+                            verified = TimestampVerification.Verify(req, resp);
                         }
                         catch (Exception e)
                         {
