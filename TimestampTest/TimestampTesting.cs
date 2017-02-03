@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using Org.BouncyCastle.Tsp;
 using System.IO;
 using NUnit.Framework;
-using TimestampConsoleMain;
+using Pit.Labs.TimestampConsole;
 
 namespace TimestampTest
 {

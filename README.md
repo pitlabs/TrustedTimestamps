@@ -50,16 +50,16 @@ Make sure to always use only one of these two optional commands.
 ### Example run
 
 Let's say we want to timestamp a file called `file.pdf` at the path `C:\Example\file.pdf`. To create a timestamp that we later can verify, make sure you are in the same directory
-as the Timestamp.exe file, open the command line and type the following:
+as the ts.exe file, open the command line and type the following:
 
 ```
-Timestamp.exe ts -query -data C:\Example\file.pdf -out C:\Example\response.tsr -cert
+ts.exe ts -query -data C:\Example\file.pdf -out C:\Example\response.tsr -cert
 ```
 
 Now the program creates a new timestamp for `file.pdf`. To verify the created timestamp, type the following:
 
 ```
-Timestamp.exe ts -verify -data C:\Example\file.pdf -in C:\Example\response.tsr
+ts.exe ts -verify -data C:\Example\file.pdf -in C:\Example\response.tsr
 ```
 
 It is important to note that the timestamp can **only** be verified if it was created using the `-cert` command.
@@ -67,8 +67,8 @@ It is important to note that the timestamp can **only** be verified if it was cr
 To create and verify a timestamp using a hash type the following:
 
 ```
-Timestamp.exe ts -query -digest F2E8378C30D317ABFCDDF9E67472C7569CFAF24573095CCEAD2969ADAE665CFF -out C:\Example\response.tsr -cert
-Timestamp.exe ts -verify -digest F2E8378C30D317ABFCDDF9E67472C7569CFAF24573095CCEAD2969ADAE665CFF -in C:\Example\response.tsr
+ts.exe ts -query -digest F2E8378C30D317ABFCDDF9E67472C7569CFAF24573095CCEAD2969ADAE665CFF -out C:\Example\response.tsr -cert
+ts.exe ts -verify -digest F2E8378C30D317ABFCDDF9E67472C7569CFAF24573095CCEAD2969ADAE665CFF -in C:\Example\response.tsr
 ```
 
 The program accepts both uppercase and lowercase hex formatting of a hash, however it accepts only SHA-256 hashes.

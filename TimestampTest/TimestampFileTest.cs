@@ -1,10 +1,10 @@
 using System;
-using Timestamping;
 using Org.BouncyCastle.Tsp;
 using System.IO;
 using Org.BouncyCastle.Math;
 using System.Net;
 using NUnit.Framework;
+using Pit.Labs.Timestamp;
 
 namespace TimestampTest
 {

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E5293B83-8F97-4821-81A0-7B34E2CBA2DC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Timestamp</RootNamespace>
-    <AssemblyName>TimestampConsole</AssemblyName>
+    <RootNamespace>Pit.Labs.TimestampConsole</RootNamespace>
+    <AssemblyName>ts</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Pit.Labs.TimestampConsole.Timestamp</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">

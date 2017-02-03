@@ -2,7 +2,7 @@
 using Org.BouncyCastle.Tsp;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Verify
+namespace Pit.Labs.Timestamp
 {
     public class TimestampVerification
     {

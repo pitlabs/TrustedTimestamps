@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using TimestampMain;
+using Pit.Labs.Timestamp;
 
 namespace TimestampTest
 {

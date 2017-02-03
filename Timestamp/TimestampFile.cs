@@ -5,7 +5,7 @@ using System.IO;
 using System.Net;
 using System.Security.Cryptography;
 
-namespace Timestamping
+namespace Pit.Labs.Timestamp
 {
     public class TimestampFile
     {

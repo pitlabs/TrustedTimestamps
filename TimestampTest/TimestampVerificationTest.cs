@@ -1,11 +1,10 @@
 ﻿using System;
-using Verify;
-using Timestamping;
 using Org.BouncyCastle.Tsp;
 using System.Security.Cryptography.X509Certificates;
 using System.IO;
 using Org.BouncyCastle.Math;
 using NUnit.Framework;
+using Pit.Labs.Timestamp;
 
 namespace TimestampTest
 {

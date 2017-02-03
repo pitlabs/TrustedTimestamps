@@ -1,10 +1,9 @@
 ﻿using Org.BouncyCastle.Math;
 using Org.BouncyCastle.Tsp;
 using System;
-using Timestamping;
-using Verify;
+using System.IO;
 
-namespace TimestampMain
+namespace Pit.Labs.Timestamp
 {
     public class TimestampVerifyer
     {
@@ -19,6 +18,23 @@ namespace TimestampMain
             }
             BigInteger nonce = resp.TimeStampToken.TimeStampInfo.Nonce;
             TimeStampRequest req = TimestampFile.CreateTimestampRequest(hashByte, true, nonce);
+            return TimestampVerification.Verify(req, resp);
+        }
+
+        public bool GetVerification(byte[] timestamp, FileStream originalFs)
+        {
+            TimeStampResponse resp = new TimeStampResponse(timestamp);
+            BigInteger nonce = resp.TimeStampToken.TimeStampInfo.Nonce;
+            byte[] hash = TimestampFile.CreateHash(originalFs);
+            TimeStampRequest req = TimestampFile.CreateTimestampRequest(hash, true, nonce);
+            return TimestampVerification.Verify(req, resp);
+        }
+
+        public bool GetVerification(byte[] timestamp, byte[] originalHash)
+        {
+            TimeStampResponse resp = new TimeStampResponse(timestamp);
+            BigInteger nonce = resp.TimeStampToken.TimeStampInfo.Nonce;
+            TimeStampRequest req = TimestampFile.CreateTimestampRequest(originalHash, true, nonce);
             return TimestampVerification.Verify(req, resp);
         }
     }

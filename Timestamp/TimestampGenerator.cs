@@ -1,9 +1,8 @@
 ﻿using Org.BouncyCastle.Tsp;
 using System;
 using System.IO;
-using Timestamping;
 
-namespace TimestampMain
+namespace Pit.Labs.Timestamp
 {
     public class TimestampGenerator
     {

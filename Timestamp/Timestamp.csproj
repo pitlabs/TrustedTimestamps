@@ -7,8 +7,8 @@
     <ProjectGuid>{9ECCD6F7-DEC3-4A34-A3FF-169F7CACD7BB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Timestamp</RootNamespace>
-    <AssemblyName>Timestamp</AssemblyName>
+    <RootNamespace>Pit.Labs.Timestamp</RootNamespace>
+    <AssemblyName>Pit.Labs.Timestamp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

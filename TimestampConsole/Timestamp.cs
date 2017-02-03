@@ -3,11 +3,10 @@ using System;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using Timestamping;
-using Verify;
 using Org.BouncyCastle.Math;
+using Pit.Labs.Timestamp;
 
-namespace TimestampConsoleMain
+namespace Pit.Labs.TimestampConsole
 {
     public class Timestamp
     {
