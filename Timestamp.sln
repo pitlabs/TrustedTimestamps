@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimestampTest", "TimestampTest\TimestampTest.csproj", "{1CC8CC40-136A-4AFA-AF12-44630B4C6781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timestamp", "Timestamp\Timestamp.csproj", "{9ECCD6F7-DEC3-4A34-A3FF-169F7CACD7BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustedTimestamps", "Timestamp\TrustedTimestamps.csproj", "{9ECCD6F7-DEC3-4A34-A3FF-169F7CACD7BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimestampConsole", "TimestampConsole\TimestampConsole.csproj", "{E5293B83-8F97-4821-81A0-7B34E2CBA2DC}"
 EndProject

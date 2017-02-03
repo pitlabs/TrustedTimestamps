@@ -17,7 +17,7 @@ after_build:
   - cmd: 7z a TrustedTimestamps.zip C:\projects\TrustedTimestamps\TimestampConsole\bin\Release\BouncyCastle.Crypto.dll
   - cmd: 7z a TrustedTimestamps.zip C:\projects\TrustedTimestamps\TimestampConsole\bin\Release\Pit.Labs.Timestamp.dll
   - cmd: 7z a TrustedTimestamps.zip C:\projects\TrustedTimestamps\TimestampConsole\bin\Release\ts.exe
-  - cmd: nuget pack C:\projects\TrustedTimestamps\Timestamp\Timestamp.csproj -version 1.0.1 -suffix alpha
+  - cmd: nuget pack C:\projects\TrustedTimestamps\Timestamp\TrustedTimestamps.csproj -version 1.0.1 -suffix alpha
 test_script:
   - cmd: nunit3-console "C:\projects\TrustedTimestamps\TimestampTest\bin\Release\TimestampTest.dll" --result=myresults.xml;format=AppVeyor --work=C:\projects\TrustedTimestamps\TimestampTest\bin\Release
 artifacts:

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Timestamp")]
+[assembly: AssemblyTitle("TrustedTimestamps")]
 [assembly: AssemblyDescription("TrustedTimestamps is a tool for easily creating and verifying Trusted Timestamps for SHA256 hashes or for files.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("IT Center RWTH Aachen")]

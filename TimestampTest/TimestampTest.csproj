@@ -114,9 +114,9 @@
       <Project>{e5293b83-8f97-4821-81a0-7b34e2cba2dc}</Project>
       <Name>TimestampConsole</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Timestamp\Timestamp.csproj">
+    <ProjectReference Include="..\Timestamp\TrustedTimestamps.csproj">
       <Project>{9eccd6f7-dec3-4a34-a3ff-169f7cacd7bb}</Project>
-      <Name>Timestamp</Name>
+      <Name>TrustedTimestamps</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

@@ -60,9 +60,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Timestamp\Timestamp.csproj">
+    <ProjectReference Include="..\Timestamp\TrustedTimestamps.csproj">
       <Project>{9eccd6f7-dec3-4a34-a3ff-169f7cacd7bb}</Project>
-      <Name>Timestamp</Name>
+      <Name>TrustedTimestamps</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
