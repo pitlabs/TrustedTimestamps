@@ -36,4 +36,4 @@ deploy:
   - provider: NuGet
     api_key:
       secure: ITluHOenbul4b2YuIX/U9YZ3OQQzeApEApknPPxjODHiZC2ra8CggWJ7LjfvaoLL
-    artifact: Pit.Labs.Timestamp.nupkg
+    artifact: Pit.Labs.Timestamp.1.0.0.nupkg
