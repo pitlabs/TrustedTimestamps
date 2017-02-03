@@ -1,6 +1,6 @@
 # TrustedTimestamps
 
-[![Build status](https://ci.appveyor.com/api/projects/status/mm4tx0vigcluebih/branch/master?svg=true)](https://ci.appveyor.com/project/rwthapp/trustedtimestamps/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/mm4tx0vigcluebih?svg=true)](https://ci.appveyor.com/project/rwthapp/trustedtimestamps)
 
 > A collection of commandline tools for trusted timestamps
 

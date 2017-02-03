@@ -17,7 +17,7 @@ after_build:
   - cmd: 7z a TrustedTimestamps.zip C:\projects\TrustedTimestamps\TimestampConsole\bin\Release\BouncyCastle.Crypto.dll
   - cmd: 7z a TrustedTimestamps.zip C:\projects\TrustedTimestamps\TimestampConsole\bin\Release\Pit.Labs.Timestamp.dll
   - cmd: 7z a TrustedTimestamps.zip C:\projects\TrustedTimestamps\TimestampConsole\bin\Release\ts.exe
-  - cmd: nuget pack C:\projects\TrustedTimestamps\Timestamp\Pit.Labs.Timestamp.nuspec
+  - cmd: nuget pack C:\projects\TrustedTimestamps\Timestamp\bin\Release\Pit.Labs.Timestamp.nuspec
 test_script:
   - cmd: nunit3-console "C:\projects\TrustedTimestamps\TimestampTest\bin\Release\TimestampTest.dll" --result=myresults.xml;format=AppVeyor --work=C:\projects\TrustedTimestamps\TimestampTest\bin\Release
 artifacts:
@@ -37,3 +37,5 @@ deploy:
     api_key:
       secure: ITluHOenbul4b2YuIX/U9YZ3OQQzeApEApknPPxjODHiZC2ra8CggWJ7LjfvaoLL
     artifact: Pit.Labs.Timestamp.1.0.0.nupkg
+    #on:
+      #appveyor_repo_tag_name: /v([0-9]+[.][0-9]+[.][0-9]+)/
