@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Pit.Labs.Timestamp</id>
-    <version>1.0.0</version>
+    <version>1.0.1-alpha</version>
     <title>TrustedTimestamps</title>
     <authors>RWTHAachenUniversity</authors>
     <licenseUrl>https://github.com/pitlabs/TrustedTimestamps/blob/master/LICENSE</licenseUrl>

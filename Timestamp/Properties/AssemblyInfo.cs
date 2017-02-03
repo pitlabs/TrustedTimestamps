@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Timestamp")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("TrustedTimestamps is a tool for easily creating and verifying Trusted Timestamps for SHA256 hashes or for files.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SRV-DTP-MP01")]
-[assembly: AssemblyProduct("Timestamp")]
-[assembly: AssemblyCopyright("Copyright © SRV-DTP-MP01 2017")]
+[assembly: AssemblyCompany("IT Center RWTH Aachen")]
+[assembly: AssemblyProduct("TrustedTimestamps")]
+[assembly: AssemblyCopyright("Copyright © IT Center RWTH Aachen 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
