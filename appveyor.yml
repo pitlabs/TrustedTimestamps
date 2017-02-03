@@ -22,7 +22,7 @@ test_script:
   - cmd: nunit3-console "C:\projects\TrustedTimestamps\TimestampTest\bin\Release\TimestampTest.dll" --result=myresults.xml;format=AppVeyor --work=C:\projects\TrustedTimestamps\TimestampTest\bin\Release
 artifacts:
   - path: TrustedTimestamps.zip
-  - path: Pit.Labs.Timestamp.1.0.0.nupkg
+  - path: Pit.Labs.Timestamp.1.0.1-alpha.nupkg
 deploy:
   - provider: GitHub
     tag: $(appveyor_repo_tag_name)
